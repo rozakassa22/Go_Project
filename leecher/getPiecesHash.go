@@ -50,5 +50,6 @@ func getPiecesHash(torrentPath string)[]uint8{
 	}
 	fmt.Println(reflect.TypeOf(hashPieces))
 	return hashPieces
-
+ 
 }
+//  The `getPiecesHash` function reads a torrent file, decodes its contents using the `bencode` package, and extracts the hash pieces, which represent the concatenated hash values for each piece of the file. It converts the hexadecimal string of the hash pieces into a byte slice and returns it. This function is useful in leeching scenarios where the hash pieces are needed for downloading files from a torrent.

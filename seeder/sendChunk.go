@@ -52,52 +52,5 @@ func sendChunk(buf int, filepath string, req net.Conn){
 	}
 
 
-	// ===============================================================
-	// file, err = os.Open(filepath)
-
-	// if err != nil {
-	// 	panic(err)
-	// }
-
-	// defer file.Close()
-	// fileInfo, err := file.Stat()
-
-	// fileSize := fileInfo.Size()
-
-
-	// if err != nil{
-	// 	panic(err)
-	// }
-	// chunkSize := int64(1024)
-
-	// numChunks := fileSize / chunkSize
-
-	// if fileSize%chunkSize != 0 {
-	// 	numChunks++
-	// }
-
-	// // idx, err := strconv.Atoi(string(buf))
-	// // fmt.Println("index got in", idx)
-	// offset := int64(buf) * chunkSize
-	// // fmt.Println("the offset:", fileSize)
 	
-	// if chunkSize + offset > fileSize{
-	// 	chunkSize = fileSize - offset + int64(1)
-	// }
-	// // fmt.Println("fileSize", fileSize)
-	// chunk := make([]byte, chunkSize)
-	// // fmt.Println("offset", offset)
-	// _, err = file.ReadAt(chunk, offset)
-	// if err != nil {
-	// 		fmt.Println("got error at reading")
-	// 		return
-	// }
-	// // fmt.Println(chunk)
-	// fmt.Println("===============================================================================")
-	// encoder := gob.NewEncoder(req)
-	// err = encoder.Encode(chunk)
-	// if f, ok := req.(interface{ Flush() }); ok {
-    // f.Flush()
-	// }
-	// req.Write(chunk)
 }

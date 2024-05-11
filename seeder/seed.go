@@ -8,7 +8,7 @@ import (
 
 func Seed(filepath string){
 	
-	conn, err := net.Listen("tcp", ":8080")
+	conn, err := net.Listen("tcp", "192.168.244.141:2701")
 
 	if err != nil {
         fmt.Println(err)
@@ -43,3 +43,4 @@ func HandleRequest(req net.Conn, filepath string){
 	fmt.Println(buf)
 	sendChunk(buf, filepath, req)
 }
+//  the code implements the seeding process for uploading data to leechers. It listens for incoming connections, handles requests from leechers by sending them the requested data chunks from a specified file.

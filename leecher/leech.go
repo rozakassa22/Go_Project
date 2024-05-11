@@ -37,7 +37,7 @@ func Leech(torrentFile string){
 		}
 		if bitField[i] == 0{
 			fmt.Println(i)
-			conn, err := net.Dial("tcp", ":8080")
+			conn, err := net.Dial("tcp", "192.168.244.141:2701")
 			encoder := gob.NewEncoder(conn)
 			decoder := gob.NewDecoder(conn)
 			if err != nil {
@@ -137,3 +137,5 @@ func PersistFile(s string, data []byte){
   log.Printf("%d bytes were written successfully",n)
 
 }
+//  The provided code implements a leeching process for downloading data from a torrent file. It connects to a seeder, requests missing pieces, verifies their integrity, merges the downloaded data, and saves it to a file. The code uses the `getPiecesHash` function to obtain the hash pieces from the torrent file and compares them with the received data to ensure its validity. This leeching process enables the retrieval of files from a torrent by connecting to seeders and reconstructing the original file through piece-by-piece downloading.
+// The provided code enables the leeching process of downloading data from a torrent file. It connects to seeders, requests missing pieces, verifies their integrity, and saves the merged data to a file. This process allows for efficient retrieval of files by downloading and reconstructing them piece by piece.

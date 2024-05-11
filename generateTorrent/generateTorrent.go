@@ -1,7 +1,7 @@
 package generateTorrent
 
 import (
-	"crypto/sha1"
+	"crypto/sha1" 
 	"fmt"
 	"io"
 	"os"
@@ -104,31 +104,4 @@ func GenerateTorrent(filePath string, trackerURL string, pieceLength int64) erro
 
 	return nil
 }
-
-// func encodeTorrent(dict map[string]interface{}, w io.Writer) error {
-// 	for k, v := range dict {
-// 		fmt.Fprintf(w, "%d:%s", len(k), k)
-// 		switch v := v.(type) {
-// 		case string:
-// 			fmt.Fprintf(w, "%d:%s", len(v), v)
-// 		case int64:
-// 			fmt.Fprintf(w, "i%de", v)
-// 		case []byte:
-// 			fmt.Fprintf(w, "%d:", len(v))
-// 			w.Write(v)
-// 		case []interface{}:
-// 			fmt.Fprint(w, "l")
-// 			for _, e := range v {
-// 				encodeTorrent(map[string]interface{}{"": e}, w)
-// 			}
-// 			fmt.Fprint(w, "e")
-// 		case map[string]interface{}:
-// 			fmt.Fprint(w, "d")
-// 			encodeTorrent(v, w)
-// 			fmt.Fprint(w, "e")
-// 		default:
-// 			return nil
-// 		}
-// 	}
-// 	return nil
-// }
+//  the "GenerateTorrent" function generates a torrent file for a given file by calculating the piece hashes and creating a dictionary representing the torrent file and then encoding and writing it to a .torrent file.
